@@ -1,0 +1,1 @@
+//create an event listener that checks for random number === currentSum;
