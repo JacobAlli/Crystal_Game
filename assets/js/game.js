@@ -1,3 +1,4 @@
+
 var crystalGame = {
 
     desiredRandomNumber: undefined,
@@ -38,7 +39,7 @@ var crystalGame = {
     },
 
     addNum2: function(){
-        $("#crystOne").on("click", function(){})
+
         this.score += this.crystalRandomNumberTwo;
         $(".score").html(this.score);
     },
@@ -69,18 +70,29 @@ var crystalGame = {
         }, 500);
     },
 
-
-
-
 };
 
 $(document).ready(function(){
+
     crystalGame.setup();
 
-    $("#crystOne").click(crystalGame.addNum1);
+    $("#crystOne").on("click", function(){
+        crystalGame.addNum1();
+    });
+    $("#crystTwo").on("click", function(){
+        crystalGame.addNum2();
+    });
+    $("#crystThree").on("click", function(){
+        crystalGame.addNum3();
+    });
+    $("#crystFour").on("click", function(){
+        crystalGame.addNum4();
+    });
 
     crystalGame.gameResult();
 });
+
+
 
 
 
